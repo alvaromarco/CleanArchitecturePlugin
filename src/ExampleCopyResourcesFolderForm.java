@@ -8,13 +8,13 @@ import javax.swing.*;
 /**
  * Created by alvaro on 21/07/2016.
  */
-public class DialogForm extends JFrame {
+public class ExampleCopyResourcesFolderForm extends JFrame {
 
     private JPanel rootPanel;
     private Project project;
 
-    public DialogForm(Project project) {
-        super("DialogForm");
+    public ExampleCopyResourcesFolderForm(Project project) {
+        super("ExampleCopyResourcesFolderForm");
 
         this.project = project;
 
