@@ -1,5 +1,5 @@
 <idea-plugin version="2">
-    <id>com.your.company.unique.plugin.id</id>
+    <id>com.github.garnett89.CleanArchitecturePlugin</id>
     <name>Clean Architecture Generator</name>
     <version>1.0</version>
     <vendor email="support_plugin@digio.es" url="http://www.digio.es">Digio</vendor>

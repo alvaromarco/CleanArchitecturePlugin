@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d9c9122-b602-4eea-bd6f-47027524659b" name="Default" comment="" />
+    <list default="true" id="1d9c9122-b602-4eea-bd6f-47027524659b" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Clean Architecture Generator/DialogForm.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Clean Architecture Generator.jar" afterPath="$PROJECT_DIR$/Clean Architecture Generator.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Clean Architecture Generator/ExampleCopyResourcesFolder.class" afterPath="$PROJECT_DIR$/out/production/Clean Architecture Generator/ExampleCopyResourcesFolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Clean Architecture Generator/META-INF/plugin.xml" afterPath="$PROJECT_DIR$/out/production/Clean Architecture Generator/META-INF/plugin.xml" />
+    </list>
     <ignored path="Example.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -312,7 +318,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
