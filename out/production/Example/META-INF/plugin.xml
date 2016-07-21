@@ -1,0 +1,49 @@
+<idea-plugin version="2">
+    <id>com.your.company.unique.plugin.id</id>
+    <name>Clean Architecture Generator</name>
+    <version>1.0</version>
+    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+
+    <description><![CDATA[
+    Generate the files to create a clean architecture.<br>
+      <em>The user can choose to create with fragment, adapter</em>
+    ]]></description>
+
+    <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="141.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <!-- <treeStructureProvider implementation="TextOnlyTreeStructureProvider"/> -->
+    </extensions>
+
+    <actions>
+        <group id="MyPlugin.AddEntity" text="_Add Entity" description="Add Entity">
+
+            <add-to-group group-id="MainMenu" anchor="last"/>
+
+            <action id="Myplugin.AddEntity" class="MyActionClass" text="Add _Entity" description="Add entity in clean architecture">
+                <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt M"/>
+            </action>
+
+          <!--  <action id="Myplugin.Dialogs" class="MyActionClass2" text="Add _Entity2" description="A test menu item">
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt P"/>
+        </action>-->
+
+        </group>
+
+    </actions>
+
+
+</idea-plugin>

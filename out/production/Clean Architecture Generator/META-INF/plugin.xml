@@ -1,0 +1,56 @@
+<idea-plugin version="2">
+    <id>com.your.company.unique.plugin.id</id>
+    <name>Clean Architecture Generator</name>
+    <version>1.0</version>
+    <vendor email="support_plugin@digio.es" url="http://www.digio.es">Digio</vendor>
+
+    <description><![CDATA[
+    Generate the files to create a clean architecture.<br>
+    <b> Based in MVP pattern and Repository Pattern. </b><br>
+    The following features are available: <br>
+    <li> Create activity or fragment with basic architecture or your basic architecture</li>
+    <li> Create activity or fragment with presenter </li>
+    <li> Create adapter </li>
+    ]]></description>
+
+    <change-notes><!--<![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>-->
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="141.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <!-- <treeStructureProvider implementation="TextOnlyTreeStructureProvider"/> -->
+    </extensions>
+
+    <actions>
+        <action id="CleanArchitectureGenereator.Generator"
+                class="GeneratorClass"
+                text="Clean Architecture Generator"
+                description="Create Clean Architecture"
+                project-type="Android"
+                icon="/icons/icon.png">
+
+            <add-to-group group-id="MainToolBar" anchor="last">
+
+            </add-to-group>
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="after"
+                          relative-to-action="ProjectViewPopupMenuRefactoringGroup"/>
+        </action>
+
+        <!--<action id="DialogID" class="ExampleCopyResourcesFolder" text="DialogName" icon="/icons/icon.png">
+            <add-to-group group-id="MainToolBar" anchor="last"/>
+        </action>-->
+    </actions>
+
+
+</idea-plugin>
