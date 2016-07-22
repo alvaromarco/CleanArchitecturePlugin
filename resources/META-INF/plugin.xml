@@ -3,7 +3,7 @@
     <id>com.github.garnett89.CleanArchitecturePlugin</id>
     <name>Clean Architecture Generator</name>
     <version>1.0</version>
-    <vendor email="alvaro.marco@digio.es" url="https://github.com/alvaromarco">Álvaro Marco Pérez</vendor>
+    <vendor email="alvaromarcoperez@gmail.com" url="https://github.com/alvaromarco">Álvaro Marco Pérez</vendor>
 
     <description><![CDATA[
     Generate the files to create a clean architecture.<br>
