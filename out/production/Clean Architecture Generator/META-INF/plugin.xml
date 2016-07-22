@@ -2,7 +2,7 @@
     <id>com.github.garnett89.CleanArchitecturePlugin</id>
     <name>Clean Architecture Generator</name>
     <version>1.0</version>
-    <vendor email="support_plugin@digio.es" url="http://www.digio.es">Digio</vendor>
+    <vendor email="alvaro.marco@digio.es" url="http://www.digio.es">Digio</vendor>
 
     <description><![CDATA[
     Generate the files to create a clean architecture.<br>
