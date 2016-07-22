@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d9c9122-b602-4eea-bd6f-47027524659b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Clean Architecture Generator.jar" afterPath="$PROJECT_DIR$/Clean Architecture Generator.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/META-INF/plugin.xml" afterPath="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/updatePlugins.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Example.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,11 +25,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="plugin.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="plugin.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+            <state relative-caret-position="34">
+              <caret line="2" column="54" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="updatePlugins.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/updatePlugins.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -64,8 +74,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/architecture/data/CreateRepository.java" />
-        <option value="$PROJECT_DIR$/src/architecture/domain/BaseUseCase.java" />
         <option value="$PROJECT_DIR$/src/architecture/data/CreateAPI.java" />
         <option value="$PROJECT_DIR$/src/architecture/model/EntityConfig.java" />
         <option value="$PROJECT_DIR$/src/MyActionClass.java" />
@@ -115,6 +123,8 @@
         <option value="$PROJECT_DIR$/src/DialogForm.java" />
         <option value="$PROJECT_DIR$/src/ExampleCopyResourcesFolder.java" />
         <option value="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
+        <option value="$PROJECT_DIR$/updatePlugin.xml" />
+        <option value="$PROJECT_DIR$/updatePlugins.xml" />
       </list>
     </option>
   </component>
@@ -235,20 +245,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Clean Architecture Generator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Clean Architecture Generator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -281,24 +277,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="icons" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Clean Architecture Generator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Clean Architecture Generator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -311,7 +289,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -709,14 +687,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/lang/Runnable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/architecture/domain/CreateUseCase.java" />
     <entry file="file://$PROJECT_DIR$/src/architecture/domain/BaseUseCase.java" />
     <entry file="file://$USER_HOME$/Desktop/intellij-community-master/platform/vcs-log/graph/src/com/intellij/vcs/log/graph/impl/facade/BaseController.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -906,10 +876,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/updatePlugins.xml.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        <state relative-caret-position="34">
+          <caret line="2" column="54" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/updatePlugins.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
           <folding />
         </state>
       </provider>

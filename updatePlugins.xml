@@ -1,0 +1,6 @@
+<plugins>
+    <plugin id="com.github.alvaromarco.CleanArchitecturePlugin"
+            url="https://github.com/alvaromarco/CleanArchitecturePlugin/blob/master/Clean%20Architecture%20Generator.jar"
+            version="1.0"/>
+
+</plugins>
