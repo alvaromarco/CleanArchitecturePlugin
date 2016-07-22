@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <idea-plugin version="2">
-    <id>com.github.garnett89.CleanArchitecturePlugin</id>
+    <id>com.github.alvaromarco.CleanArchitecturePlugin</id>
     <name>Clean Architecture Generator</name>
-    <version>1.0</version>
+    <version>1.0.1</version>
     <vendor email="alvaromarcoperez@gmail.com" url="https://github.com/alvaromarco">Álvaro Marco Pérez</vendor>
 
     <description><![CDATA[
