@@ -2,7 +2,7 @@
 <idea-plugin version="2">
     <id>com.github.alvaromarco.CleanArchitecturePlugin</id>
     <name>Clean Architecture Generator</name>
-    <version>1.0.1</version>
+    <version>1.0</version>
     <vendor email="alvaromarcoperez@gmail.com" url="https://github.com/alvaromarco">Álvaro Marco Pérez</vendor>
 
     <description><![CDATA[
