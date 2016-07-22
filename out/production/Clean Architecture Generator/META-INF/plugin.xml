@@ -12,6 +12,9 @@
     <li> Create activity or fragment with basic architecture or your basic architecture</li>
     <li> Create activity or fragment with presenter </li>
     <li> Create adapter </li>
+    <br><br>
+    <b>VERY IMPORTANT</b> copy all <a href="http://github.com/alvaromarco/CleanArchitecturePlugin/tree/master/resources/templates"> templates </a> into folder .AndroidStudioConfigVersion/config/fileTemplates.
+    <a href="http://tools.android.com/tech-docs/configuration">How to know the Android Studio Config folder</a>
     ]]></description>
 
     <change-notes><!--<![CDATA[
