@@ -4,15 +4,15 @@ This plugin is based in MVP pattern and Repository Pattern. You can create a ent
 The core about this plugin its build on Retrofit 2 and Dagger 2. The main structure generated included @Inject about Dagger2 and Adapter about Retrofit 2 Adapter, its very recommened add Retrofit 2 and Dagger 2 libraries in your gradle. <br> 
 Activity Android is based in AppCompatActivity to make it easier the compability with Android elements, also Fragment Android is based in support v4. <br>
 If you select entity with presenter, create a presenter reference in view element and is required implements the interface to connect presenter and the corresponding view. <br> 
-To works presenter you need add UseCase in package domain and create a new reference in presenter to works with it. <br>
+To works presenter you need add UseCase in package domain and create a new reference in presenter to works with it.
 
-The following features are available:
+<h3>The following features are available: </h3>
 <li> Create entity with activity or fragment based in basic architecture or your basic architecture.</li>
 <li> Any activity or fragment included a layout with simple RelativeLayout root element.
 <li> Create entity activity or fragment with presenter.</li>
 <li> Create entity adapter based in RecyclerView </li>
 
-<br><b>Instructions</b><br>
+<h3>Instructions</h3>
 <ol>
 <li> <b>VERY IMPORTANT</b> copy all templates (/resources/templates) into AndroidStudioConfig/config/fileTemplates. <a href="http://tools.android.com/tech-docs/configuration">How to know the Android Studio Config folder</a>
 <li> Its recommended for ths plugin add in your gradle the libraries Retrofit 2 and Dagger 2. 
@@ -23,7 +23,6 @@ The following features are available:
 <li> Select if you want with presenter and adapter </li>
 <li> Click <i>Confirm</i> button and wait to create the entity</li>
 </ol>
-<br><br>
 
 <h2>Architecture</h2>
 <h3>All packages and class that you can create </h3>
