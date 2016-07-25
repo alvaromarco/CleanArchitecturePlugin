@@ -36,6 +36,8 @@
         <!-- <treeStructureProvider implementation="TextOnlyTreeStructureProvider"/> -->
     </extensions>
 
+    <depends>org.jetbrains.android</depends>
+
     <actions>
         <action id="CleanArchitectureGenereator.Generator"
                 class="GeneratorClass"
