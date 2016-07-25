@@ -24,6 +24,20 @@ The following features are available:
 <li> Click <i>Confirm</i> button and wait to create the entity</li>
 </ol>
 <br><br>
+
+<h2>Architecture</h2>
+<h3>All packages and class that you can create </h3>
+<img src="https://github.com/alvaromarco/CleanArchitecturePlugin/blob/master/images/architecture_example.png" width="100%">
+
+<h2>Plugin in Android Studio </h2>
+<img src="https://github.com/alvaromarco/CleanArchitecturePlugin/blob/master/images/snapshot_1.png" width="100%">
+<br><br>
+<img src="https://github.com/alvaromarco/CleanArchitecturePlugin/blob/master/images/snapshot_2.png" width="100%">
+
+<h2>Example Click Button</h2>
+<h3>Show class and methods when you click in a button</h3>
+<img src="https://github.com/alvaromarco/CleanArchitecturePlugin/blob/master/images/example_click_button.png" width="100%">
+
 More information and screenshots: <a href="https://plugins.jetbrains.com/plugin/8504?pr=">Plugin reference</a>
 
 alvaromarco 
