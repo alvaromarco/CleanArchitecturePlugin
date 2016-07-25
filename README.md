@@ -1,5 +1,5 @@
 # CleanArchitecturePlugin
-<h1>Android Studio plugin generate clean architecture project to make develop easier.</h1><br><br>
+<h1>Android Studio plugin generate clean architecture project to make develop easier.</h1>
 This plugin is based in MVP pattern and Repository Pattern. You can create a entity main packages (data, domain and view) only write the name about the new entity.<br><br>
 The core about this plugin its build on Retrofit 2 and Dagger 2. The main structure generated included @Inject about Dagger2 and Adapter about Retrofit 2 Adapter, its very recommened add Retrofit 2 and Dagger 2 libraries in your gradle. <br> 
 Activity Android is based in AppCompatActivity to make it easier the compability with Android elements, also Fragment Android is based in support v4. <br>
