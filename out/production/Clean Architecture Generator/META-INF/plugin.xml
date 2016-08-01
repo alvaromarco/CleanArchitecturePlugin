@@ -2,7 +2,7 @@
 <idea-plugin version="2">
     <id>com.github.alvaromarco.CleanArchitecturePlugin</id>
     <name>Clean Architecture Generator</name>
-    <version>1.0</version>
+    <version>1.0.1</version>
     <vendor email="alvaromarcoperez@gmail.com" url="https://github.com/alvaromarco">Álvaro Marco Pérez</vendor>
 
     <description><![CDATA[
@@ -35,6 +35,8 @@
         <!-- Add your extensions here -->
         <!-- <treeStructureProvider implementation="TextOnlyTreeStructureProvider"/> -->
     </extensions>
+
+    <depends>org.jetbrains.android</depends>
 
     <actions>
         <action id="CleanArchitectureGenereator.Generator"

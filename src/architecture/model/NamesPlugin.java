@@ -62,7 +62,7 @@ public class NamesPlugin {
     public static final String BASE_SERVICE_TEMPLATE = "BaseServiceCleanArch";
     public static final String BASE_USE_CASE_TEMPLATE = "UseCaseCleanArch";
     public static final String BASE_SERVER_RESPONSE_TEMPLATE = "ServerResponseCleanArch";
-    public static final String BASE_CONSTANTS = "ConstantsCleanArch";
+    public static final String BASE_UTIL = "UtilsCleanArch";
 
     // View
     public static final String ACTIVITY_TEMPLATE = "ActivityCleanArch";

@@ -33,7 +33,7 @@ public class UtilController extends EntityBase {
         utilPackage = createDirectory(parent, UTIL.toLowerCase());
 
         // Create Constants class
-        Runnable runnable = () -> JavaDirectoryService.getInstance().createClass(utilPackage, CONSTANTS, BASE_CONSTANTS);
+        Runnable runnable = () -> JavaDirectoryService.getInstance().createClass(utilPackage, CONSTANTS, BASE_UTIL);
         WriteCommandAction.runWriteCommandAction(getProject(), runnable);
 
 
