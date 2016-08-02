@@ -90,6 +90,7 @@ public class ViewController extends EntityBase {
         Element root = doc.createElement("RelativeLayout");
         root.setAttributeNS(nsUri, "xmlns:android", androidUri);
         root.setAttributeNS(nsUri, "xmlns:tools", toolsUri);
+        root.setAttribute("android:id", "@+id/container");
         root.setAttribute("android:layout_width", "match_parent");
         root.setAttribute("android:layout_height", "match_parent");
         root.setAttribute("tools:context", directory + "." + className);

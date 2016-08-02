@@ -2,8 +2,10 @@
 
 #parse("File Header.java")
 
-public interface ${NAME}{
+public interface ${NAME}<T>{
 
+    void setView(T view);
+    
     void create();
 
     void resume();
