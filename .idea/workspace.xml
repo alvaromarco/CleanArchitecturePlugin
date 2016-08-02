@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1d9c9122-b602-4eea-bd6f-47027524659b" name="Default" comment="Changes in id">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Clean Architecture Generator.jar" afterPath="$PROJECT_DIR$/Clean Architecture Generator.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/META-INF/plugin.xml" afterPath="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
     </list>
     <ignored path="Example.iws" />
@@ -26,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="plugin.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="plugin.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="858">
-              <caret line="53" column="17" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
+            <state relative-caret-position="391">
+              <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -56,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EntityActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EntityActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/architecture/components/view/EntityActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
+            <state relative-caret-position="276">
+              <caret line="49" column="17" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -399,7 +397,7 @@
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="example" />
-    <property name="SearchEverywhereHistoryKey" value="plu&#9;FILE&#9;file://C:/Users/Alvaro/Desktop/Clean Architecture Generator/resources/META-INF/plugin.xml&#10;entityfr&#9;FILE&#9;file://C:/Users/alvaro/IdeaProjects/Example/src/architecture/view/EntityFragment.java&#10;entitypre&#9;FILE&#9;file://C:/Users/alvaro/IdeaProjects/Example/src/architecture/view/EntityPresenter.java&#10;JavaDirectoryService&#9;FILE&#9;jar://C:/Program Files (x86)/JetBrains/IntelliJ IDEA Community Edition 2016.1.3/lib/idea.jar!/com/intellij/psi/impl/file/JavaDirectoryServiceImpl.class" />
+    <property name="SearchEverywhereHistoryKey" value="pl&#9;FILE&#9;file://C:/Users/Alvaro/Desktop/Clean Architecture Generator/resources/META-INF/plugin.xml&#10;plu&#9;FILE&#9;file://C:/Users/Alvaro/Desktop/Clean Architecture Generator/resources/META-INF/plugin.xml&#10;entityfr&#9;FILE&#9;file://C:/Users/alvaro/IdeaProjects/Example/src/architecture/view/EntityFragment.java&#10;entitypre&#9;FILE&#9;file://C:/Users/alvaro/IdeaProjects/Example/src/architecture/view/EntityPresenter.java&#10;JavaDirectoryService&#9;FILE&#9;jar://C:/Program Files (x86)/JetBrains/IntelliJ IDEA Community Edition 2016.1.3/lib/idea.jar!/com/intellij/psi/impl/file/JavaDirectoryServiceImpl.class" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="PsiViewer.ProjectComponent">
@@ -988,14 +986,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="53" column="17" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/architecture/components/data/DataController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
@@ -1014,8 +1004,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/architecture/components/view/EntityActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
+        <state relative-caret-position="276">
+          <caret line="49" column="17" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
           <folding />
         </state>
       </provider>

@@ -2,7 +2,7 @@
 <idea-plugin version="2">
     <id>com.github.alvaromarco.CleanArchitecturePlugin</id>
     <name>Clean Architecture Generator</name>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <vendor email="alvaromarcoperez@gmail.com" url="https://github.com/alvaromarco">Álvaro Marco Pérez</vendor>
 
     <description><![CDATA[
@@ -17,10 +17,12 @@
     <a href="http://tools.android.com/tech-docs/configuration">How to know the Android Studio Config folder</a>
     ]]></description>
 
-    <change-notes><!--<![CDATA[
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>
-    ]]>-->
+    <change-notes><![CDATA[
+     Fix errors.<br>
+      <em>Fix template errors</em>
+      <em>Fix Constants file error </em>
+      <em>Fix layout id container error </em>
+    ]]>
     </change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
