@@ -13,6 +13,10 @@ public class ${NAME} extends ${PRESENTER_IMPL}<${NAME}.View>{
     @Inject public ${NAME}() {
     }
     
+    @Override public void setView(${NAME}.View view) {
+        this.mView = view;
+    }
+
 
     public interface View {
         //TODO: Create methods to implements in Activity or Fragment

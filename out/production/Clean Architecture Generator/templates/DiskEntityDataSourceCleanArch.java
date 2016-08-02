@@ -1,6 +1,6 @@
 #if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME};#end
 
-import ${PACKAGEE_BASE_SERVICE}.${BASE_SERVICE};
+import ${PACKAGE_BASE_SERVICE}.${BASE_SERVICE};
 import ${PACKAGE_CACHE}.${CACHE};
 
 import javax.inject.Inject;
