@@ -7,7 +7,7 @@ import architecture.components.base.view.BaseViewController;
 import com.intellij.openapi.project.Project;
 import com.intellij.psi.PsiDirectory;
 
-import static architecture.model.NamesPlugin.*;
+import static architecture.model.NamesPlugin.MAIN;
 
 /**
  * Created by alvaro on 15/07/2016.
@@ -30,20 +30,30 @@ public class BaseController extends EntityBase {
         return mainDirectory;
     }
 
+    public static void setMainDirectory(PsiDirectory mainDirectory) {
+        BaseController.mainDirectory = mainDirectory;
+    }
+
     public static void generateBaseArchitecture(PsiDirectory parent) {
-        // Create main package
-        mainDirectory = createDirectory(parent, MAIN.toLowerCase());
+
+        // Check if exists main package
+        PsiDirectory packageResult = containsPackage(parent, MAIN.toLowerCase());
+
+        // Not exists
+        if (packageResult == null) {
+            // Create main package
+            mainDirectory = createDirectory(parent, MAIN.toLowerCase());
+        } else {  // Exists
+            setMainDirectory(packageResult);
+        }
 
         // Create data package
-        /*if (!containsPackage(getProjectDirectory(), DATA.toLowerCase()))*/
-            BaseDataController.create();
+        BaseDataController.create();
 
         // Create domain package
-       /* if (!containsPackage(getProjectDirectory(), DOMAIN.toLowerCase()))*/
-            BaseDomainController.create();
+        BaseDomainController.create();
 
         // Create view package
-        /*if (!containsPackage(getProjectDirectory(), VIEW.toLowerCase()))*/
-            BaseViewController.create();
+        BaseViewController.create();
     }
 }

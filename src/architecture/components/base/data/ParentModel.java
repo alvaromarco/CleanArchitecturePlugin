@@ -12,23 +12,25 @@ import static architecture.model.NamesPlugin.*;
  * Create model package with DataSource and ServerResponse class
  */
 public class ParentModel extends BaseDataController {
+
     public ParentModel(Project project, PsiDirectory mainDirectory) {
         super(project, mainDirectory);
     }
 
     public static void create() {
 
-        // Create model package
-        PsiDirectory modelDirectory = createDirectory(getDataDirectory(), MODEL.toLowerCase());
+        if (containsPackage(getDataDirectory(), MODEL.toLowerCase()) == null) { // Not contains
+            // Create model package
+            PsiDirectory modelDirectory = createDirectory(getDataDirectory(), MODEL.toLowerCase());
 
-        // Create DataSource class + ServerResponse class
-        Runnable runnable = () -> {
-            JavaDirectoryService.getInstance().createClass(modelDirectory, DATA_SOURCE, DATA_SOURCE_TEMPLATE);
-            JavaDirectoryService.getInstance().createClass(modelDirectory, SERVER_RESPONSE, BASE_SERVER_RESPONSE_TEMPLATE);
+            // Create DataSource class + ServerResponse class
+            Runnable runnable = () -> {
+                JavaDirectoryService.getInstance().createClass(modelDirectory, DATA_SOURCE, DATA_SOURCE_TEMPLATE);
+                JavaDirectoryService.getInstance().createClass(modelDirectory, SERVER_RESPONSE, BASE_SERVER_RESPONSE_TEMPLATE);
+            };
 
-        };
-
-        WriteCommandAction.runWriteCommandAction(getProject(), runnable);
+            WriteCommandAction.runWriteCommandAction(getProject(), runnable);
+        }
 
     }
 }

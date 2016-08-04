@@ -25,18 +25,38 @@ public class ParentAPI extends BaseDataController {
         return apiDirectory;
     }
 
+    public static void setApiDirectory(PsiDirectory apiDirectory) {
+        ParentAPI.apiDirectory = apiDirectory;
+    }
+
     public static void create() {
 
-        // Create api package
-        apiDirectory = createDirectory(getDataDirectory(), API.toLowerCase());
+        PsiDirectory packageResult = containsPackage(getDataDirectory(), API.toLowerCase());
 
-        // Create BaseService
-        HashMap<String, String> varTemplate = new HashMap<>();
-        varTemplate.put("PACKAGE_UTIL", getPackageNameProject(UtilController.getUtilPackage()));
-        varTemplate.put("CONSTANTS", CONSTANTS);
+        // Not exists
+        if (packageResult == null) {
 
-        Runnable runnable = () -> JavaDirectoryService.getInstance().createClass(apiDirectory, BASE_SERVICE, BASE_SERVICE_TEMPLATE, false, varTemplate);
-        WriteCommandAction.runWriteCommandAction(getProject(), runnable);
+            // Create api package
+            apiDirectory = createDirectory(getDataDirectory(), API.toLowerCase());
+
+            // Create BaseService.java
+            HashMap<String, String> varTemplate = new HashMap<>();
+            varTemplate.put("PACKAGE_UTIL", getPackageNameProject(UtilController.getUtilPackage()));
+            varTemplate.put("CONSTANTS", CONSTANTS);
+
+            Runnable runnable = () -> JavaDirectoryService.getInstance().createClass(apiDirectory, BASE_SERVICE, BASE_SERVICE_TEMPLATE, false, varTemplate);
+            WriteCommandAction.runWriteCommandAction(getProject(), runnable);
+        } else { // Exists
+            setApiDirectory(packageResult);
+
+            if (apiDirectory.findFile(BASE_SERVICE + ".java") == null) { // Not contains BaseService.java
+                // Create BaseService.java
+                Runnable runnable = () -> JavaDirectoryService.getInstance().createClass(apiDirectory, CONSTANTS, BASE_UTIL);
+                WriteCommandAction.runWriteCommandAction(getProject(), runnable);
+            }
+
+        }
+
 
     }
 }

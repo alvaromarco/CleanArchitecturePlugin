@@ -4,7 +4,8 @@ import architecture.components.base.BaseController;
 import com.intellij.openapi.project.Project;
 import com.intellij.psi.PsiDirectory;
 
-import static architecture.model.NamesPlugin.*;
+import static architecture.model.NamesPlugin.CACHE;
+import static architecture.model.NamesPlugin.DATA;
 
 /**
  * Created by alvaro on 15/07/2016.
@@ -32,22 +33,32 @@ public class BaseDataController extends BaseController {
         return dataDirectory;
     }
 
+    public static void setDataDirectory(PsiDirectory dataDirectory) {
+        BaseDataController.dataDirectory = dataDirectory;
+    }
+
     public static void create() {
 
-        // Create data package
-        dataDirectory = createDirectory(getMainDirectory(), DATA.toLowerCase());
+        // Check if exists data package
+        PsiDirectory packageResult = containsPackage(getMainDirectory(), DATA.toLowerCase());
+
+        // Not exists
+        if (packageResult == null) {
+            // Create data package
+            dataDirectory = createDirectory(getMainDirectory(), DATA.toLowerCase());
+        } else {
+            setDataDirectory(packageResult);
+        }
 
         // Create api package with components
-       /* if (!containsPackage(dataDirectory, API.toLowerCase()))*/
-            ParentAPI.create();
+        ParentAPI.create();
 
         // Create cache package
-        /*if (!containsPackage(dataDirectory, CACHE.toLowerCase()))*/
+        if (containsPackage(dataDirectory, CACHE.toLowerCase()) == null)
             createDirectory(dataDirectory, CACHE.toLowerCase());
 
         // Create model package with components
-        /*if (!containsPackage(dataDirectory, MODEL.toLowerCase()))*/
-            ParentModel.create();
+        ParentModel.create();
 
     }
 }
