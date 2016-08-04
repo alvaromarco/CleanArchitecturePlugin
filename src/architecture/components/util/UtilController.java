@@ -33,24 +33,25 @@ public class UtilController extends EntityBase {
     }
 
     public static void createArchitecture(PsiDirectory parent) {
-        /**
-         * If packageResult is null: The project not contains package util, create util package
-         * else packageResult isn't null: The project contains package util and set the package
-         **/
+
+        // Check if exists util package
         PsiDirectory packageResult = containsPackage(parent, UTIL.toLowerCase());
 
+        // Not exists
         if (packageResult == null) {
+
             // Create util package
             utilPackage = createDirectory(parent, UTIL.toLowerCase());
 
-            // Create Constants class
+            // Create Constants.java
             Runnable runnable = () -> JavaDirectoryService.getInstance().createClass(utilPackage, CONSTANTS, BASE_UTIL);
             WriteCommandAction.runWriteCommandAction(getProject(), runnable);
-        } else { // Get user util package
+        } else { // Exists
+
+            // Set user util package
             setUtilPackage(packageResult);
 
-            PsiFile file = utilPackage.findFile(CONSTANTS + ".java");
-            if (file == null) {
+            if (utilPackage.findFile(CONSTANTS + ".java") == null) { // Not contains Constants.java
                 // Create Constants class
                 Runnable runnable = () -> JavaDirectoryService.getInstance().createClass(utilPackage, CONSTANTS, BASE_UTIL);
                 WriteCommandAction.runWriteCommandAction(getProject(), runnable);

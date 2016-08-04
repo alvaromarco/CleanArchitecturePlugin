@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d9c9122-b602-4eea-bd6f-47027524659b" name="Default" comment="Changes in id">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Clean Architecture Generator.jar" afterPath="$PROJECT_DIR$/Clean Architecture Generator.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Clean Architecture Generator/architecture/EntityBase.class" afterPath="$PROJECT_DIR$/out/production/Clean Architecture Generator/architecture/EntityBase.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Clean Architecture Generator/architecture/components/base/BaseController.class" afterPath="$PROJECT_DIR$/out/production/Clean Architecture Generator/architecture/components/base/BaseController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Clean Architecture Generator/architecture/components/base/data/BaseDataController.class" afterPath="$PROJECT_DIR$/out/production/Clean Architecture Generator/architecture/components/base/data/BaseDataController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Clean Architecture Generator/architecture/components/data/DataController.class" afterPath="$PROJECT_DIR$/out/production/Clean Architecture Generator/architecture/components/data/DataController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Clean Architecture Generator/architecture/components/util/UtilController.class" afterPath="$PROJECT_DIR$/out/production/Clean Architecture Generator/architecture/components/util/UtilController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Clean Architecture Generator/architecture/components/view/ViewController.class" afterPath="$PROJECT_DIR$/out/production/Clean Architecture Generator/architecture/components/view/ViewController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Clean Architecture Generator/templates/FragmentCleanArch.java" afterPath="$PROJECT_DIR$/out/production/Clean Architecture Generator/templates/FragmentCleanArch.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/architecture/EntityBase.java" afterPath="$PROJECT_DIR$/src/architecture/EntityBase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/architecture/components/base/BaseController.java" afterPath="$PROJECT_DIR$/src/architecture/components/base/BaseController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/architecture/components/base/data/BaseDataController.java" afterPath="$PROJECT_DIR$/src/architecture/components/base/data/BaseDataController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/architecture/components/data/DataController.java" afterPath="$PROJECT_DIR$/src/architecture/components/data/DataController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/architecture/components/util/UtilController.java" afterPath="$PROJECT_DIR$/src/architecture/components/util/UtilController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/architecture/components/view/ViewController.java" afterPath="$PROJECT_DIR$/src/architecture/components/view/ViewController.java" />
     </list>
     <ignored path="Example.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,7 +23,60 @@
     <favorites_list name="Example" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="UtilController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/architecture/components/util/UtilController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="53" column="12" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EntityBase.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/architecture/EntityBase.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="58" column="38" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/architecture/components/base/BaseController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseDataController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/architecture/components/base/data/BaseDataController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="397">
+              <caret line="41" column="27" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParentAPI.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/architecture/components/base/data/ParentAPI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -110,11 +150,11 @@
         <option value="$PROJECT_DIR$/src/architecture/model/NamesPlugin.java" />
         <option value="$PROJECT_DIR$/src/architecture/components/data/EntityRepository.java" />
         <option value="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
-        <option value="$PROJECT_DIR$/src/architecture/EntityBase.java" />
         <option value="$PROJECT_DIR$/src/architecture/components/base/BaseController.java" />
         <option value="$PROJECT_DIR$/src/architecture/components/base/data/BaseDataController.java" />
         <option value="$PROJECT_DIR$/src/architecture/components/data/DataController.java" />
         <option value="$PROJECT_DIR$/src/architecture/components/view/ViewController.java" />
+        <option value="$PROJECT_DIR$/src/architecture/EntityBase.java" />
         <option value="$PROJECT_DIR$/src/architecture/components/util/UtilController.java" />
       </list>
     </option>
@@ -302,7 +342,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="base" />
+              <option name="myItemId" value="util" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -329,40 +369,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="base" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CleanArchitecturePlugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CleanArchitecturePlugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="architecture" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="base" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -729,7 +735,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -913,13 +919,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/architecture/components/base/data/ParentAPI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/architecture/components/data/EntityAPI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -981,14 +980,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/architecture/components/base/data/BaseDataController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="48" column="67" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/architecture/components/base/domain/BaseDomainController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1013,14 +1004,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/architecture/components/base/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="45" column="74" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/architecture/components/view/ViewController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
@@ -1037,23 +1020,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/architecture/components/util/UtilController.java">
+    <entry file="file://$PROJECT_DIR$/src/architecture/EntityBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="52" column="31" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#848#849#0" expanded="true" />
-            <element signature="e#904#905#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="408">
+          <caret line="58" column="38" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/architecture/EntityBase.java">
+    <entry file="file://$PROJECT_DIR$/src/architecture/components/base/BaseController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-612">
-          <caret line="77" column="33" selection-start-line="77" selection-start-column="33" selection-end-line="77" selection-end-column="33" />
+        <state relative-caret-position="414">
+          <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/architecture/components/base/data/BaseDataController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="41" column="27" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/architecture/components/base/data/ParentAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/architecture/components/util/UtilController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="53" column="12" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

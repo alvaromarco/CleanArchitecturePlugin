@@ -53,9 +53,7 @@ public class EntityBase {
         PsiDirectory parent = projectDirectory; // Main package about the project
         parent = createDirectory(parent, this.entityConfig.getEntityName().toLowerCase());
 
-
         UtilController.createArchitecture(projectDirectory);
-
 
         /*if (!containsPackage(projectDirectory, MAIN.toLowerCase()))*/
             BaseController.generateBaseArchitecture(projectDirectory);
