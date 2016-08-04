@@ -4,7 +4,7 @@ import architecture.EntityBase;
 import com.intellij.openapi.project.Project;
 import com.intellij.psi.PsiDirectory;
 
-import static architecture.model.NamesPlugin.*;
+import static architecture.model.NamesPlugin.DATA;
 
 /**
  * Created by alvaro on 15/07/2016.
@@ -43,20 +43,16 @@ public class DataController extends EntityBase {
         dataPackage = createDirectory(parent, DATA.toLowerCase());
 
         // Create api package with components
-        /*if (!containsPackage(dataPackage, API.toLowerCase()))*/
-            EntityAPI.create();
+        EntityAPI.create();
 
         // Create cache package with components
-        /*if (!containsPackage(dataPackage, CACHE.toLowerCase()))*/
-            EntityCache.create();
+        EntityCache.create();
 
         // Create model package
-       /* if (!containsPackage(dataPackage, MODEL.toLowerCase()))*/
-            EntityModel.create();
+        EntityModel.create();
 
         // Create repository package with components
-       /* if (!containsPackage(dataPackage, REPOSITORY.toLowerCase()))*/
-            EntityRepository.create();
+        EntityRepository.create();
 
     }
 

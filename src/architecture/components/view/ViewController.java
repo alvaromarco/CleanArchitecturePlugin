@@ -18,7 +18,7 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
-import static architecture.model.NamesPlugin.*;
+import static architecture.model.NamesPlugin.VIEW;
 
 /**
  * Created by alvaro on 15/07/2016.
@@ -54,20 +54,16 @@ public class ViewController extends EntityBase {
         viewPackage = createDirectory(parent, VIEW.toLowerCase());
 
         // Creation presenter package and components
-       /* if (getEntityConfig().isContainsPresenter() && !containsPackage(viewPackage, PRESENTER.toLowerCase()))*/
-            EntityPresenter.create();
+        EntityPresenter.create();
 
         // Creation activity package and components
-       /* if (getEntityConfig().isContainsActivity() && !containsPackage(viewPackage, ACTIVITY.toLowerCase()))*/
-            EntityActivity.create();
+        EntityActivity.create();
 
         // Create fragment package and components
-        /*if (getEntityConfig().isContainsFragment() && !containsPackage(viewPackage, FRAGMENT.toLowerCase()))*/
-            EntityFragment.create();
+        EntityFragment.create();
 
         // Create adapter package and components
-        /*if (getEntityConfig().isContainsAdapter() && !containsPackage(viewPackage, ADAPTER.toLowerCase()))*/
-            EntityAdapter.create();
+        EntityAdapter.create();
 
     }
 
