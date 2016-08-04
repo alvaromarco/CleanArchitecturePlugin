@@ -12,7 +12,6 @@ import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.psi.PsiDirectory;
 
 import static architecture.model.NamesPlugin.MAIN;
-import static architecture.model.NamesPlugin.UTIL;
 
 /**
  * Created by alvaro on 14/07/2016.
@@ -54,10 +53,11 @@ public class EntityBase {
         PsiDirectory parent = projectDirectory; // Main package about the project
         parent = createDirectory(parent, this.entityConfig.getEntityName().toLowerCase());
 
-        if (!containsPackage(projectDirectory, UTIL.toLowerCase()))
-            UtilController.createArchitecture(projectDirectory);
 
-        if (!containsPackage(projectDirectory, MAIN.toLowerCase()))
+        UtilController.createArchitecture(projectDirectory);
+
+
+        /*if (!containsPackage(projectDirectory, MAIN.toLowerCase()))*/
             BaseController.generateBaseArchitecture(projectDirectory);
 
         ViewController.createArchitecture(parent);
@@ -72,19 +72,19 @@ public class EntityBase {
      * Find the directory from user click to create new entity
      *
      * @param sourceDirectory source directory to search
-     * @param namePackage name about package that you search
+     * @param namePackage     name about package that you search
      * @return
      */
-    public static boolean containsPackage(PsiDirectory sourceDirectory, String namePackage) {
-        boolean containsPackage = false;
+    public static PsiDirectory containsPackage(PsiDirectory sourceDirectory, String namePackage) {
+        PsiDirectory mPackage = null;
 
         // Find from project directory to subdirectories
         for (PsiDirectory iterator : sourceDirectory.getSubdirectories()) {
             if (iterator.getName().equals(namePackage))
-                containsPackage = true;
+                mPackage = iterator;
         }
 
-        return containsPackage;
+        return mPackage;
     }
 
 

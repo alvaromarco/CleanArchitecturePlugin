@@ -35,15 +35,15 @@ public class BaseController extends EntityBase {
         mainDirectory = createDirectory(parent, MAIN.toLowerCase());
 
         // Create data package
-        if (!containsPackage(getProjectDirectory(), DATA.toLowerCase()))
+        /*if (!containsPackage(getProjectDirectory(), DATA.toLowerCase()))*/
             BaseDataController.create();
 
         // Create domain package
-        if (!containsPackage(getProjectDirectory(), DOMAIN.toLowerCase()))
+       /* if (!containsPackage(getProjectDirectory(), DOMAIN.toLowerCase()))*/
             BaseDomainController.create();
 
         // Create view package
-        if (!containsPackage(getProjectDirectory(), VIEW.toLowerCase()))
+        /*if (!containsPackage(getProjectDirectory(), VIEW.toLowerCase()))*/
             BaseViewController.create();
     }
 }

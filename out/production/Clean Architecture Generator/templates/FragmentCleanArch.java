@@ -16,7 +16,7 @@ import ${PACKAGE_BASE_PRESENTER}.${BASE_PRESENTER};
 #parse("File Header.java")
 public class ${NAME} extends ${BASE_FRAGMENT}  #if (${PRESENTER} && ${PRESENTER} != "") implements ${PRESENTER}.View #end {
 
-    #if (${PRESENTER} && ${PRESENTER} != "") @Inject private ${PRESENTER} mPresenter;#end
+    #if (${PRESENTER} && ${PRESENTER} != "") @Inject ${PRESENTER} mPresenter;#end
 
     @Nullable @Override public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_${LAYOUT_NAME}, container, false);

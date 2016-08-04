@@ -43,19 +43,19 @@ public class DataController extends EntityBase {
         dataPackage = createDirectory(parent, DATA.toLowerCase());
 
         // Create api package with components
-        if (!containsPackage(dataPackage, API.toLowerCase()))
+        /*if (!containsPackage(dataPackage, API.toLowerCase()))*/
             EntityAPI.create();
 
         // Create cache package with components
-        if (!containsPackage(dataPackage, CACHE.toLowerCase()))
+        /*if (!containsPackage(dataPackage, CACHE.toLowerCase()))*/
             EntityCache.create();
 
         // Create model package
-        if (!containsPackage(dataPackage, MODEL.toLowerCase()))
+       /* if (!containsPackage(dataPackage, MODEL.toLowerCase()))*/
             EntityModel.create();
 
         // Create repository package with components
-        if (!containsPackage(dataPackage, REPOSITORY.toLowerCase()))
+       /* if (!containsPackage(dataPackage, REPOSITORY.toLowerCase()))*/
             EntityRepository.create();
 
     }

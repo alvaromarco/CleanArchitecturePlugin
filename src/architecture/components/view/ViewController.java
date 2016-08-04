@@ -54,19 +54,19 @@ public class ViewController extends EntityBase {
         viewPackage = createDirectory(parent, VIEW.toLowerCase());
 
         // Creation presenter package and components
-        if (getEntityConfig().isContainsPresenter() && !containsPackage(viewPackage, PRESENTER.toLowerCase()))
+       /* if (getEntityConfig().isContainsPresenter() && !containsPackage(viewPackage, PRESENTER.toLowerCase()))*/
             EntityPresenter.create();
 
         // Creation activity package and components
-        if (getEntityConfig().isContainsActivity() && !containsPackage(viewPackage, ACTIVITY.toLowerCase()))
+       /* if (getEntityConfig().isContainsActivity() && !containsPackage(viewPackage, ACTIVITY.toLowerCase()))*/
             EntityActivity.create();
 
         // Create fragment package and components
-        if (getEntityConfig().isContainsFragment() && !containsPackage(viewPackage, FRAGMENT.toLowerCase()))
+        /*if (getEntityConfig().isContainsFragment() && !containsPackage(viewPackage, FRAGMENT.toLowerCase()))*/
             EntityFragment.create();
 
         // Create adapter package and components
-        if (getEntityConfig().isContainsAdapter() && !containsPackage(viewPackage, ADAPTER.toLowerCase()))
+        /*if (getEntityConfig().isContainsAdapter() && !containsPackage(viewPackage, ADAPTER.toLowerCase()))*/
             EntityAdapter.create();
 
     }

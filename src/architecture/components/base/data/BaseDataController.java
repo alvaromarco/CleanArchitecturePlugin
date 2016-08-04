@@ -38,15 +38,15 @@ public class BaseDataController extends BaseController {
         dataDirectory = createDirectory(getMainDirectory(), DATA.toLowerCase());
 
         // Create api package with components
-        if (!containsPackage(dataDirectory, API.toLowerCase()))
+       /* if (!containsPackage(dataDirectory, API.toLowerCase()))*/
             ParentAPI.create();
 
         // Create cache package
-        if (!containsPackage(dataDirectory, CACHE.toLowerCase()))
+        /*if (!containsPackage(dataDirectory, CACHE.toLowerCase()))*/
             createDirectory(dataDirectory, CACHE.toLowerCase());
 
         // Create model package with components
-        if (!containsPackage(dataDirectory, MODEL.toLowerCase()))
+        /*if (!containsPackage(dataDirectory, MODEL.toLowerCase()))*/
             ParentModel.create();
 
     }
