@@ -54,16 +54,20 @@ public class ViewController extends EntityBase {
         viewPackage = createDirectory(parent, VIEW.toLowerCase());
 
         // Creation presenter package and components
-        EntityPresenter.create();
+        if (getEntityConfig().isContainsPresenter())
+            EntityPresenter.create();
 
         // Creation activity package and components
-        EntityActivity.create();
+        if (getEntityConfig().isContainsActivity())
+            EntityActivity.create();
 
         // Create fragment package and components
-        EntityFragment.create();
+        if (getEntityConfig().isContainsFragment())
+            EntityFragment.create();
 
         // Create adapter package and components
-        EntityAdapter.create();
+        if (getEntityConfig().isContainsAdapter())
+            EntityAdapter.create();
 
     }
 

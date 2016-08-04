@@ -31,7 +31,7 @@ public class Presenter extends BaseViewController {
     public static void create() {
 
         // Check if exists view package
-        PsiDirectory packageResult = containsPackage(getMainDirectory(), PRESENTER.toLowerCase());
+        PsiDirectory packageResult = containsPackage(getViewDirectory(), PRESENTER.toLowerCase());
 
         if (packageResult == null) { // Not exists
             // Create Presenter Directory
