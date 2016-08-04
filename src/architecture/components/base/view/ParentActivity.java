@@ -31,7 +31,7 @@ public class ParentActivity extends BaseViewController {
 
     public static void create() {
 
-        // Check if exists util package
+        // Check if exists activity package
         PsiDirectory packageResult = containsPackage(getViewDirectory(), ACTIVITY.toLowerCase());
 
         // Not exists

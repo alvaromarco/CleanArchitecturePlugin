@@ -31,13 +31,13 @@ public class Presenter extends BaseViewController {
     public static void create() {
 
         // Check if exists view package
-        PsiDirectory packageResult = containsPackage(getMainDirectory(), VIEW.toLowerCase());
+        PsiDirectory packageResult = containsPackage(getMainDirectory(), PRESENTER.toLowerCase());
 
         if (packageResult == null) { // Not exists
             // Create Presenter Directory
             presenterDirectory = createDirectory(getViewDirectory(), PRESENTER.toLowerCase());
 
-            // Create Presenter interface and PresenterImp class
+            // Create Presenter.java and PresenterImp.java
             HashMap<String, String> varTemplate = new HashMap<>();
 
             varTemplate.put("PRESENTER", PRESENTER);
