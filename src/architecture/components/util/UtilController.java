@@ -52,27 +52,11 @@ public class UtilController extends EntityBase {
             setUtilPackage(packageResult);
 
             if (utilPackage.findFile(CONSTANTS + ".java") == null) { // Not contains Constants.java
+
                 // Create Constants class
                 Runnable runnable = () -> JavaDirectoryService.getInstance().createClass(utilPackage, CONSTANTS, BASE_UTIL);
                 WriteCommandAction.runWriteCommandAction(getProject(), runnable);
             }
-
-           /* PsiClass[] psiClasses = JavaDirectoryService.getInstance().getClasses(utilPackage);
-
-            boolean containsUtils = false;
-            for (int i = 0; i< psiClasses.length; i++){
-                if (psiClasses[i].getName().equals(CONSTANTS)){
-                    containsUtils = true;
-                    break;
-                }
-            }
-
-            if (!containsUtils){
-                // Create Constants class
-                Runnable runnable = () -> JavaDirectoryService.getInstance().createClass(utilPackage, CONSTANTS, BASE_UTIL);
-                WriteCommandAction.runWriteCommandAction(getProject(), runnable);
-            }*/
-
 
         }
 

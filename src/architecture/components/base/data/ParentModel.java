@@ -12,24 +12,53 @@ import static architecture.model.NamesPlugin.*;
  * Create model package with DataSource and ServerResponse class
  */
 public class ParentModel extends BaseDataController {
+    private static PsiDirectory modelDirectory;
 
     public ParentModel(Project project, PsiDirectory mainDirectory) {
         super(project, mainDirectory);
     }
 
+    public static PsiDirectory getModelDirectory() {
+        return modelDirectory;
+    }
+
+    public static void setModelDirectory(PsiDirectory modelDirectory) {
+        ParentModel.modelDirectory = modelDirectory;
+    }
+
     public static void create() {
 
-        if (containsPackage(getDataDirectory(), MODEL.toLowerCase()) == null) { // Not contains
-            // Create model package
-            PsiDirectory modelDirectory = createDirectory(getDataDirectory(), MODEL.toLowerCase());
+        PsiDirectory packageResult = containsPackage(getDataDirectory(), MODEL.toLowerCase());
 
-            // Create DataSource class + ServerResponse class
+        if (packageResult == null) { // Not contains model package
+            // Create model package
+            modelDirectory = createDirectory(getDataDirectory(), MODEL.toLowerCase());
+
+            // Create DataSource.java + ServerResponse.java
             Runnable runnable = () -> {
                 JavaDirectoryService.getInstance().createClass(modelDirectory, DATA_SOURCE, DATA_SOURCE_TEMPLATE);
                 JavaDirectoryService.getInstance().createClass(modelDirectory, SERVER_RESPONSE, BASE_SERVER_RESPONSE_TEMPLATE);
             };
 
             WriteCommandAction.runWriteCommandAction(getProject(), runnable);
+        } else { // Contains model package
+
+            // Set user model package
+            setModelDirectory(packageResult);
+
+            if (modelDirectory.findFile(DATA_SOURCE + ".java") == null) { // Not contains DataSource.java
+
+                // Create DataSource.java
+                Runnable runnable = () -> JavaDirectoryService.getInstance().createClass(modelDirectory, DATA_SOURCE, DATA_SOURCE_TEMPLATE);
+                WriteCommandAction.runWriteCommandAction(getProject(), runnable);
+            }
+
+            if (modelDirectory.findFile(DATA_SOURCE + ".java") == null) { // Not contains DataSource.java
+
+                // Create ServerResponse.java
+                Runnable runnable = () -> JavaDirectoryService.getInstance().createClass(modelDirectory, SERVER_RESPONSE, BASE_SERVER_RESPONSE_TEMPLATE);
+                WriteCommandAction.runWriteCommandAction(getProject(), runnable);
+            }
         }
 
     }

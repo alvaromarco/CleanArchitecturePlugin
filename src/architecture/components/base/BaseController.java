@@ -44,6 +44,8 @@ public class BaseController extends EntityBase {
             // Create main package
             mainDirectory = createDirectory(parent, MAIN.toLowerCase());
         } else {  // Exists
+
+            // Set user main package
             setMainDirectory(packageResult);
         }
 

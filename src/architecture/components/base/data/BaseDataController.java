@@ -39,6 +39,11 @@ public class BaseDataController extends BaseController {
 
     public static void create() {
 
+        /**
+         * DATA
+         * Create data package
+         */
+
         // Check if exists data package
         PsiDirectory packageResult = containsPackage(getMainDirectory(), DATA.toLowerCase());
 
@@ -47,17 +52,30 @@ public class BaseDataController extends BaseController {
             // Create data package
             dataDirectory = createDirectory(getMainDirectory(), DATA.toLowerCase());
         } else {
+            // Set user data package
             setDataDirectory(packageResult);
         }
 
-        // Create api package with components
+
+        /**
+         * API
+         * Create api package with components
+         */
         ParentAPI.create();
 
-        // Create cache package
+
+        /**
+         * CACHE
+         * Create cache package
+         */
         if (containsPackage(dataDirectory, CACHE.toLowerCase()) == null)
             createDirectory(dataDirectory, CACHE.toLowerCase());
 
-        // Create model package with components
+
+        /**
+         * MODEL
+         * Create model package with components
+         */
         ParentModel.create();
 
     }

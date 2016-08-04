@@ -11,8 +11,6 @@ import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.psi.PsiDirectory;
 
-import static architecture.model.NamesPlugin.MAIN;
-
 /**
  * Created by alvaro on 14/07/2016.
  */
@@ -55,8 +53,7 @@ public class EntityBase {
 
         UtilController.createArchitecture(projectDirectory);
 
-        /*if (!containsPackage(projectDirectory, MAIN.toLowerCase()))*/
-            BaseController.generateBaseArchitecture(projectDirectory);
+        BaseController.generateBaseArchitecture(projectDirectory);
 
         ViewController.createArchitecture(parent);
 

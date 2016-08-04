@@ -50,10 +50,10 @@ public class BaseViewController extends BaseController {
         // Check if exists view package
         PsiDirectory packageResult = containsPackage(getMainDirectory(), VIEW.toLowerCase());
 
-        if (packageResult == null){ // Not exists
+        if (packageResult == null) { // Not exists
             // Create view package
             viewDirectory = createDirectory(getMainDirectory(), VIEW.toLowerCase());
-        }else{ // Exists
+        } else { // Exists
             setViewDirectory(packageResult);
         }
 

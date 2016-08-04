@@ -47,9 +47,12 @@ public class ParentAPI extends BaseDataController {
             Runnable runnable = () -> JavaDirectoryService.getInstance().createClass(apiDirectory, BASE_SERVICE, BASE_SERVICE_TEMPLATE, false, varTemplate);
             WriteCommandAction.runWriteCommandAction(getProject(), runnable);
         } else { // Exists
+
+            // Set user api directory
             setApiDirectory(packageResult);
 
             if (apiDirectory.findFile(BASE_SERVICE + ".java") == null) { // Not contains BaseService.java
+
                 // Create BaseService.java
                 Runnable runnable = () -> JavaDirectoryService.getInstance().createClass(apiDirectory, CONSTANTS, BASE_UTIL);
                 WriteCommandAction.runWriteCommandAction(getProject(), runnable);
