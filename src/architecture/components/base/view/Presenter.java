@@ -24,21 +24,50 @@ public class Presenter extends BaseViewController {
         return presenterDirectory;
     }
 
+    public static void setPresenterDirectory(PsiDirectory presenterDirectory) {
+        Presenter.presenterDirectory = presenterDirectory;
+    }
+
     public static void create() {
 
-        // Create Presenter Directory
-        presenterDirectory = createDirectory(getViewDirectory(), PRESENTER.toLowerCase());
+        // Check if exists view package
+        PsiDirectory packageResult = containsPackage(getMainDirectory(), VIEW.toLowerCase());
 
-        // Create Presenter interface and PresenterImp class
-        HashMap<String, String> varTemplate = new HashMap<>();
+        if (packageResult == null) { // Not exists
+            // Create Presenter Directory
+            presenterDirectory = createDirectory(getViewDirectory(), PRESENTER.toLowerCase());
 
-        varTemplate.put("PRESENTER", PRESENTER);
+            // Create Presenter interface and PresenterImp class
+            HashMap<String, String> varTemplate = new HashMap<>();
 
-        Runnable runnable = () -> {
-            JavaDirectoryService.getInstance().createClass(presenterDirectory, PRESENTER, BASE_PRESENTER);
-            JavaDirectoryService.getInstance().createClass(presenterDirectory, PRESENTER_IMPL, BASE_PRESENTER_IMPL, false, varTemplate);
-        };
+            varTemplate.put("PRESENTER", PRESENTER);
 
-        WriteCommandAction.runWriteCommandAction(getProject(), runnable);
+            Runnable runnable = () -> {
+                JavaDirectoryService.getInstance().createClass(presenterDirectory, PRESENTER, BASE_PRESENTER);
+                JavaDirectoryService.getInstance().createClass(presenterDirectory, PRESENTER_IMPL, BASE_PRESENTER_IMPL, false, varTemplate);
+            };
+
+            WriteCommandAction.runWriteCommandAction(getProject(), runnable);
+        } else { // Exists
+            setPresenterDirectory(packageResult);
+
+            if (presenterDirectory.findFile(PRESENTER + ".java") == null) { // Not contains Presenter.java
+                // Create Presenter.java
+                Runnable runnable = () -> JavaDirectoryService.getInstance().createClass(presenterDirectory, PRESENTER, BASE_PRESENTER);
+                WriteCommandAction.runWriteCommandAction(getProject(), runnable);
+            }
+
+            if (presenterDirectory.findFile(PRESENTER_IMPL + ".java") == null) { // Not contains PresenterImpl.java
+                // Create PresenterImpl.class
+                HashMap<String, String> varTemplate = new HashMap<>();
+                varTemplate.put("PRESENTER", PRESENTER);
+
+                Runnable runnable = () -> JavaDirectoryService.getInstance().createClass(presenterDirectory, PRESENTER_IMPL, BASE_PRESENTER_IMPL, false, varTemplate);
+                WriteCommandAction.runWriteCommandAction(getProject(), runnable);
+            }
+
+        }
+
+
     }
 }

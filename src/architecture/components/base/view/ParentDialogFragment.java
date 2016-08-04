@@ -21,13 +21,15 @@ public class ParentDialogFragment extends BaseViewController {
 
     public static void create() {
 
-        // Create Parent Fragment class
-        HashMap<String, String> varTemplate = new HashMap<>();
+        if (ParentFragment.getFragmentDirectory().findFile(PARENT_DIALOG_FRAGMENT + ".java") == null) { // Not contains ParentDialogFragment.java
+            // Create Parent Fragment class
+            HashMap<String, String> varTemplate = new HashMap<>();
 
-        varTemplate.put("PACKAGE_PRESENTER", getPackageNameProject(Presenter.getPresenterDirectory()));
-        varTemplate.put("PRESENTER", PRESENTER);
+            varTemplate.put("PACKAGE_PRESENTER", getPackageNameProject(Presenter.getPresenterDirectory()));
+            varTemplate.put("PRESENTER", PRESENTER);
 
-        Runnable runnable = () -> JavaDirectoryService.getInstance().createClass(ParentFragment.getFragmentDirectory(), PARENT_DIALOG_FRAGMENT, BASE_DIALOG_FRAGMENT_TEMPLATE, false, varTemplate);
-        WriteCommandAction.runWriteCommandAction(getProject(), runnable);
+            Runnable runnable = () -> JavaDirectoryService.getInstance().createClass(ParentFragment.getFragmentDirectory(), PARENT_DIALOG_FRAGMENT, BASE_DIALOG_FRAGMENT_TEMPLATE, false, varTemplate);
+            WriteCommandAction.runWriteCommandAction(getProject(), runnable);
+        }
     }
 }

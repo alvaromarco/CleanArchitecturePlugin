@@ -24,17 +24,39 @@ public class ParentFragment extends BaseViewController {
         return fragmentDirectory;
     }
 
+    public static void setFragmentDirectory(PsiDirectory fragmentDirectory) {
+        ParentFragment.fragmentDirectory = fragmentDirectory;
+    }
+
     public static void create() {
 
-        // Create activity package
-        fragmentDirectory = createDirectory(getViewDirectory(), FRAGMENT.toLowerCase());
+        // Check if exists fragment package
+        PsiDirectory packageResult = containsPackage(getViewDirectory(), FRAGMENT.toLowerCase());
 
-        // Create Parent Activity class
-        HashMap<String, String> varTemplate = new HashMap<>();
-        varTemplate.put("PACKAGE_PRESENTER", getPackageNameProject(Presenter.getPresenterDirectory()));
-        varTemplate.put("PRESENTER", PRESENTER);
+        // Not exists
+        if (packageResult == null) {
+            // Create fragment package
+            fragmentDirectory = createDirectory(getViewDirectory(), FRAGMENT.toLowerCase());
 
-        Runnable runnable = () -> JavaDirectoryService.getInstance().createClass(fragmentDirectory, PARENT_FRAGMENT, BASE_FRAGMENT_TEMPLATE, false, varTemplate);
-        WriteCommandAction.runWriteCommandAction(getProject(), runnable);
+            // Create ParentFragment.java
+            HashMap<String, String> varTemplate = new HashMap<>();
+            varTemplate.put("PACKAGE_PRESENTER", getPackageNameProject(Presenter.getPresenterDirectory()));
+            varTemplate.put("PRESENTER", PRESENTER);
+
+            Runnable runnable = () -> JavaDirectoryService.getInstance().createClass(fragmentDirectory, PARENT_FRAGMENT, BASE_FRAGMENT_TEMPLATE, false, varTemplate);
+            WriteCommandAction.runWriteCommandAction(getProject(), runnable);
+        } else {
+            setFragmentDirectory(packageResult);
+
+            if (fragmentDirectory.findFile(PARENT_FRAGMENT + ".java") == null) { // Not contains Constants.java
+                // Create ParentFragment.java
+                HashMap<String, String> varTemplate = new HashMap<>();
+                varTemplate.put("PACKAGE_PRESENTER", getPackageNameProject(Presenter.getPresenterDirectory()));
+                varTemplate.put("PRESENTER", PRESENTER);
+
+                Runnable runnable = () -> JavaDirectoryService.getInstance().createClass(fragmentDirectory, PARENT_FRAGMENT, BASE_FRAGMENT_TEMPLATE, false, varTemplate);
+                WriteCommandAction.runWriteCommandAction(getProject(), runnable);
+            }
+        }
     }
 }

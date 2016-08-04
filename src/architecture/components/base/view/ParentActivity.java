@@ -25,19 +25,44 @@ public class ParentActivity extends BaseViewController {
         return activityDirectory;
     }
 
+    public static void setActivityDirectory(PsiDirectory activityDirectory) {
+        ParentActivity.activityDirectory = activityDirectory;
+    }
+
     public static void create() {
 
-        // Create activity package
-        activityDirectory = createDirectory(getViewDirectory(), ACTIVITY.toLowerCase());
+        // Check if exists util package
+        PsiDirectory packageResult = containsPackage(getViewDirectory(), ACTIVITY.toLowerCase());
 
-        // Create Parent Activity class
-        HashMap<String, String> varTemplate = new HashMap<>();
+        // Not exists
+        if (packageResult == null) {
 
-        varTemplate.put("PACKAGE_PROJECT", getPackageNameProject(getProjectDirectory()));
-        varTemplate.put("PACKAGE_PRESENTER", getPackageNameProject(Presenter.getPresenterDirectory()));
-        varTemplate.put("PRESENTER", PRESENTER);
+            // Create activity package
+            activityDirectory = createDirectory(getViewDirectory(), ACTIVITY.toLowerCase());
 
-        Runnable runnable = () -> JavaDirectoryService.getInstance().createClass(activityDirectory, PARENT_ACTIVITY, BASE_ACTIVITY_TEMPLATE, false, varTemplate);
-        WriteCommandAction.runWriteCommandAction(getProject(), runnable);
+            // Create ParentActivity.class
+            HashMap<String, String> varTemplate = new HashMap<>();
+
+            varTemplate.put("PACKAGE_PROJECT", getPackageNameProject(getProjectDirectory()));
+            varTemplate.put("PACKAGE_PRESENTER", getPackageNameProject(Presenter.getPresenterDirectory()));
+            varTemplate.put("PRESENTER", PRESENTER);
+
+            Runnable runnable = () -> JavaDirectoryService.getInstance().createClass(activityDirectory, PARENT_ACTIVITY, BASE_ACTIVITY_TEMPLATE, false, varTemplate);
+            WriteCommandAction.runWriteCommandAction(getProject(), runnable);
+        } else { // Exists
+            setActivityDirectory(packageResult);
+
+            if (activityDirectory.findFile(PARENT_ACTIVITY + ".java") == null) { // Not contains ParentActivity.java
+                // Create ParentActivity.java
+                HashMap<String, String> varTemplate = new HashMap<>();
+
+                varTemplate.put("PACKAGE_PROJECT", getPackageNameProject(getProjectDirectory()));
+                varTemplate.put("PACKAGE_PRESENTER", getPackageNameProject(Presenter.getPresenterDirectory()));
+                varTemplate.put("PRESENTER", PRESENTER);
+
+                Runnable runnable = () -> JavaDirectoryService.getInstance().createClass(activityDirectory, PARENT_ACTIVITY, BASE_ACTIVITY_TEMPLATE, false, varTemplate);
+                WriteCommandAction.runWriteCommandAction(getProject(), runnable);
+            }
+        }
     }
 }

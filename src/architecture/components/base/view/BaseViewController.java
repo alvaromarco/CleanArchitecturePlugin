@@ -38,13 +38,24 @@ public class BaseViewController extends BaseController {
         return viewDirectory;
     }
 
+    public static void setViewDirectory(PsiDirectory viewDirectory) {
+        BaseViewController.viewDirectory = viewDirectory;
+    }
+
     /**
      * Create view structure. Contains: activity, fragment, dialogFragment, presenter and adapter
      */
     public static void create() {
 
-        // Create view package
-        viewDirectory = createDirectory(getMainDirectory(), VIEW.toLowerCase());
+        // Check if exists view package
+        PsiDirectory packageResult = containsPackage(getMainDirectory(), VIEW.toLowerCase());
+
+        if (packageResult == null){ // Not exists
+            // Create view package
+            viewDirectory = createDirectory(getMainDirectory(), VIEW.toLowerCase());
+        }else{ // Exists
+            setViewDirectory(packageResult);
+        }
 
         // Create Presenter
         Presenter.create();
@@ -57,6 +68,5 @@ public class BaseViewController extends BaseController {
 
         // Create Dialog Parent Fragment
         ParentDialogFragment.create();
-
     }
 }
