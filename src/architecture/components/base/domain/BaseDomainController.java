@@ -22,12 +22,23 @@ public class BaseDomainController extends BaseController {
     }
 
     public static void create() {
+        // Check if exists domain package
+        PsiDirectory packageResult = containsPackage(getMainDirectory(), DOMAIN.toLowerCase());
 
-        // Create domain package
-        PsiDirectory domainDirectory = createDirectory(getMainDirectory(), DOMAIN.toLowerCase());
+        if (packageResult == null) {
+            // Create domain package
+            PsiDirectory domainDirectory = createDirectory(getMainDirectory(), DOMAIN.toLowerCase());
 
-        Runnable runnable = () -> JavaDirectoryService.getInstance().createClass(domainDirectory, USE_CASE_BASE, BASE_USE_CASE_TEMPLATE);
-        WriteCommandAction.runWriteCommandAction(getProject(), runnable);
+            Runnable runnable = () -> JavaDirectoryService.getInstance().createClass(domainDirectory, USE_CASE_BASE, BASE_USE_CASE_TEMPLATE);
+            WriteCommandAction.runWriteCommandAction(getProject(), runnable);
+        } else {
+            if (packageResult.findFile(USE_CASE_BASE + ".java") == null) { // Not contains UseCase.java
+                // Create UseCase class
+                Runnable runnable = () -> JavaDirectoryService.getInstance().createClass(packageResult, CONSTANTS, BASE_UTIL);
+                WriteCommandAction.runWriteCommandAction(getProject(), runnable);
+            }
+        }
+
 
     }
 }
