@@ -19,7 +19,7 @@ import android.support.v7.app.AppCompatActivity;
 #parse("File Header.java")
 public class ${NAME} extends #if (${BASE_ACTIVITY} && ${BASE_ACTIVITY} != "") ${BASE_ACTIVITY} #else AppCompatActivity #end #if (${PRESENTER} && ${PRESENTER} != "") implements ${PRESENTER}.View #end {
 
-    #if (${PRESENTER} && ${PRESENTER} != "") @Inject ${PRESENTER} mPresenter;#end
+    #if (${PRESENTER} && ${PRESENTER} != "") public @Inject ${PRESENTER} mPresenter;#end
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
