@@ -36,7 +36,11 @@ public class ${NAME} extends #if (${BASE_ACTIVITY} && ${BASE_ACTIVITY} != "") ${
     
     #if (${BASE_PRESENTER} && ${BASE_PRESENTER} != "") 
     @Override public ${BASE_PRESENTER} getPresenter() {
-        return null;
+		#if (${BASE_PRESENTER} && ${BASE_PRESENTER} != "") 
+		return mPresenter;
+		#else 
+		return null;
+		#end
     }#end
     
 }
