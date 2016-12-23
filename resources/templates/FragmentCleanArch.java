@@ -29,8 +29,11 @@ public class ${NAME} extends ${BASE_FRAGMENT}  #if (${PRESENTER} && ${PRESENTER}
     
     #if (${BASE_PRESENTER} && ${BASE_PRESENTER} != "") 
     @Override public ${BASE_PRESENTER} getPresenter() {
+        #if (${BASE_PRESENTER} && ${BASE_PRESENTER} != "") 
+        return mPresenter;
+        #else 
         return null;
-    }
-    #end
+        #end
+    }#end
     
 }

@@ -12,13 +12,30 @@ public class ${NAME} {
 
     @Inject ${ENTITY_SERVICE} mService;
     @Inject ${ENTITY_CACHE} mCache;
-    
+
+    private ${CLOUD_ENTITY_DATA_SOURCE} mCloudAnnouncementsDataSource;
+    private ${DISK_ENTITY_DATA_SOURCE} mDiskAnnouncementsDataSource;
+
     @Inject public ${NAME}() {
    
     }
     
-    public ${CLOUD_ENTITY_DATA_SOURCE} getCloudDataSource() { return new ${CLOUD_ENTITY_DATA_SOURCE}(mService); }
+    public ${CLOUD_ENTITY_DATA_SOURCE} getCloudDataSource() { 
+    	if (mCloudAnnouncementsDataSource != null) {
+            return mCloudAnnouncementsDataSource;
+        } else {
+            mCloudAnnouncementsDataSource = new ${CLOUD_ENTITY_DATA_SOURCE}(mCache);
+            return mCloudAnnouncementsDataSource;
+        }    	
+    }
     
-    public ${DISK_ENTITY_DATA_SOURCE} getDiskDataSource() { return new ${DISK_ENTITY_DATA_SOURCE}(mCache); }
+    public ${DISK_ENTITY_DATA_SOURCE} getDiskDataSource() { 
+    	if (mDiskAnnouncementsDataSource != null) {
+            return mDiskAnnouncementsDataSource;
+        } else {
+            mDiskAnnouncementsDataSource = new ${DISK_ENTITY_DATA_SOURCE}(mCache);
+            return mDiskAnnouncementsDataSource;
+        }   
+    }
 
 }
